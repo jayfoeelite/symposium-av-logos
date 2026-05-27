@@ -1,5 +1,7 @@
 import { useState } from "react";
+import { Routes, Route, Link } from "react-router-dom";
 import acdLogo from "./ACD Logo White.svg";
+import Discovery from "./Discovery.jsx";
 
 const ACD_LOGO = `<svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1827.57 414.73">
   <defs><style>.cls-1{fill:#fff;}</style></defs>
@@ -309,7 +311,7 @@ const concepts = [
   },
 ];
 
-export default function App() {
+function LogoExplorer() {
   const [selected, setSelected] = useState(0);
   const concept = concepts[selected];
   const isDark = concept.bg.startsWith("#0") || concept.bg.startsWith("#05");
@@ -491,7 +493,7 @@ export default function App() {
           >
             <img src={acdLogo} alt="Aboriginal Creative Design" style={{ height: 18, display: "block" }} />
           </a>
-          <div style={{ fontSize: 10, color: "#2A3A4A", letterSpacing: "0.15em", textTransform: "uppercase" }}>
+          <div style={{ fontSize: 10, color: "#2A3A4A", letterSpacing: "0.15em", textTransform: "uppercase", display: "flex", alignItems: "center", gap: 12, flexWrap: "wrap" }}>
             <a
               href="https://aboriginalcreatives.com"
               target="_blank"
@@ -502,11 +504,34 @@ export default function App() {
             >
               aboriginalcreatives.com
             </a>
-            {" · "}SYMPOSIUM AUDIOVISUAL · LOGO EXPLORATION v1
+            <span>{" · "}SYMPOSIUM AUDIOVISUAL · LOGO EXPLORATION v1</span>
+            <span> · </span>
+            <Link
+              to="/discovery"
+              style={{
+                color: "#00C2FF",
+                textDecoration: "none",
+                transition: "color 0.2s",
+                letterSpacing: "0.15em",
+              }}
+              onMouseEnter={(e) => e.currentTarget.style.color = "#00E5FF"}
+              onMouseLeave={(e) => e.currentTarget.style.color = "#00C2FF"}
+            >
+              Fill out brand questionnaire
+            </Link>
           </div>
         </div>
       </div>
       </div>
     </div>
+  );
+}
+
+export default function App() {
+  return (
+    <Routes>
+      <Route path="/" element={<LogoExplorer />} />
+      <Route path="/discovery" element={<Discovery />} />
+    </Routes>
   );
 }

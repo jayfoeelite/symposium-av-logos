@@ -1,4 +1,5 @@
 import { useState } from "react";
+import acdLogo from "./ACD Logo White.svg";
 
 const ACD_LOGO = `<svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1827.57 414.73">
   <defs><style>.cls-1{fill:#fff;}</style></defs>
@@ -314,14 +315,11 @@ export default function App() {
           href="https://aboriginalcreatives.com"
           target="_blank"
           rel="noopener noreferrer"
-          style={{ height: 28, opacity: 0.9, transition: "opacity 0.2s" }}
+          style={{ display: "block", opacity: 0.9, transition: "opacity 0.2s" }}
           onMouseEnter={(e) => e.currentTarget.style.opacity = "1"}
           onMouseLeave={(e) => e.currentTarget.style.opacity = "0.9"}
         >
-          <div
-            style={{ height: 28 }}
-            dangerouslySetInnerHTML={{ __html: ACD_LOGO }}
-          />
+          <img src={acdLogo} alt="Aboriginal Creative Design" style={{ height: 28, display: "block" }} />
         </a>
         <div style={{ fontSize: 10, letterSpacing: "0.25em", color: "#2A3A4A", textTransform: "uppercase" }}>
           CLIENT PREVIEW
@@ -467,14 +465,11 @@ export default function App() {
             href="https://aboriginalcreatives.com"
             target="_blank"
             rel="noopener noreferrer"
-            style={{ height: 18, opacity: 0.4, transition: "opacity 0.2s" }}
+            style={{ display: "block", opacity: 0.4, transition: "opacity 0.2s" }}
             onMouseEnter={(e) => e.currentTarget.style.opacity = "0.7"}
             onMouseLeave={(e) => e.currentTarget.style.opacity = "0.4"}
           >
-            <div
-              style={{ height: 18 }}
-              dangerouslySetInnerHTML={{ __html: ACD_LOGO }}
-            />
+            <img src={acdLogo} alt="Aboriginal Creative Design" style={{ height: 18, display: "block" }} />
           </a>
           <div style={{ fontSize: 10, color: "#2A3A4A", letterSpacing: "0.15em", textTransform: "uppercase" }}>
             <a

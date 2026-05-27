@@ -128,33 +128,24 @@ const concepts = [
         }}>SYMPOAV.COM</div>
       </div>
     ),
-    submark: ({ accent, textPrimary, textSecondary }) => (
-      <div style={{ display: "flex", flexDirection: "column", alignItems: "flex-start", gap: 6 }}>
-        <div style={{ display: "flex", alignItems: "flex-end", gap: 4 }}>
-          {[14, 20, 28].map((h, i) => (
-            <div key={i} style={{
-              width: 8,
-              height: h,
-              background: i === 2 ? accent : `${accent}${i === 1 ? "BB" : "55"}`,
-              borderRadius: 2,
-            }} />
-          ))}
-          <div style={{
-            fontSize: 16,
-            fontWeight: 800,
-            color: textPrimary,
-            fontFamily: "'Helvetica Neue', Helvetica, Arial, sans-serif",
-            letterSpacing: "0.05em",
-            marginLeft: 6,
-          }}>SympoAV</div>
-        </div>
+    submark: ({ accent, textPrimary }) => (
+      <div style={{ display: "flex", alignItems: "flex-end", gap: 4 }}>
+        {[14, 20, 28].map((h, i) => (
+          <div key={i} style={{
+            width: 8,
+            height: h,
+            background: i === 2 ? accent : `${accent}${i === 1 ? "BB" : "55"}`,
+            borderRadius: 2,
+          }} />
+        ))}
         <div style={{
-          fontSize: 8,
-          letterSpacing: "0.2em",
-          color: textSecondary || accent,
-          fontFamily: "monospace",
-          marginLeft: 40,
-        }}>.com</div>
+          fontSize: 16,
+          fontWeight: 800,
+          color: textPrimary,
+          fontFamily: "'Helvetica Neue', Helvetica, Arial, sans-serif",
+          letterSpacing: "0.05em",
+          marginLeft: 6,
+        }}>SympoAV</div>
       </div>
     ),
   },
@@ -205,7 +196,7 @@ const concepts = [
         </div>
       </div>
     ),
-    submark: ({ accent, textPrimary }) => (
+    submark: ({ accent }) => (
       <div style={{ display: "flex", flexDirection: "column", alignItems: "center", gap: 8 }}>
         <svg width="44" height="44" viewBox="0 0 44 44">
           {Array.from({ length: 7 }).map((_, i) => {
@@ -218,23 +209,14 @@ const concepts = [
           <line x1="4" y1="32" x2="40" y2="32" stroke={accent} strokeWidth="1.5" strokeLinecap="round" />
           <circle cx="22" cy="36" r="2.5" fill={accent} />
         </svg>
-        <div style={{ display: "flex", flexDirection: "column", alignItems: "center", gap: 2 }}>
-          <div style={{
-            fontSize: 14,
-            letterSpacing: "0.15em",
-            color: accent,
-            fontFamily: "Georgia, serif",
-            textTransform: "uppercase",
-            fontWeight: 600,
-          }}>SympoAV</div>
-          <div style={{
-            fontSize: 8,
-            letterSpacing: "0.2em",
-            color: accent,
-            fontFamily: "'Helvetica Neue', sans-serif",
-            opacity: 0.7,
-          }}>.com</div>
-        </div>
+        <div style={{
+          fontSize: 14,
+          letterSpacing: "0.15em",
+          color: accent,
+          fontFamily: "Georgia, serif",
+          textTransform: "uppercase",
+          fontWeight: 600,
+        }}>SympoAV</div>
       </div>
     ),
   },
@@ -271,7 +253,7 @@ const concepts = [
         </div>
       </div>
     ),
-    submark: ({ accent, textPrimary, textSecondary }) => (
+    submark: ({ accent, textPrimary }) => (
       <div style={{ display: "flex", flexDirection: "column", alignItems: "center", gap: 8 }}>
         <svg width="42" height="42" viewBox="0 0 42 42">
           {[[21, 4], [38, 21], [21, 38], [4, 21]].map(([cx, cy], i) => (
@@ -283,22 +265,14 @@ const concepts = [
           <circle cx="21" cy="21" r="6" fill="none" stroke={accent} strokeWidth="1.5" />
           <circle cx="21" cy="21" r="2.5" fill={accent} />
         </svg>
-        <div style={{ display: "flex", flexDirection: "column", alignItems: "center", gap: 2 }}>
-          <div style={{
-            fontSize: 13,
-            letterSpacing: "0.15em",
-            color: textPrimary,
-            fontFamily: "monospace",
-            textTransform: "uppercase",
-            fontWeight: 700,
-          }}>SympoAV</div>
-          <div style={{
-            fontSize: 7,
-            letterSpacing: "0.3em",
-            color: textSecondary,
-            fontFamily: "monospace",
-          }}>.com</div>
-        </div>
+        <div style={{
+          fontSize: 13,
+          letterSpacing: "0.15em",
+          color: textPrimary,
+          fontFamily: "monospace",
+          textTransform: "uppercase",
+          fontWeight: 700,
+        }}>SympoAV</div>
       </div>
     ),
   },
@@ -326,17 +300,10 @@ const concepts = [
         </div>
       </div>
     ),
-    submark: ({ accent, textPrimary, textSecondary }) => (
+    submark: ({ accent, textPrimary }) => (
       <div style={{ display: "flex", flexDirection: "column", alignItems: "center", gap: 4 }}>
         <div style={{ fontSize: 20, fontWeight: 800, letterSpacing: "-0.01em", color: textPrimary, fontFamily: "Georgia, serif", lineHeight: 1 }}>SympoAV</div>
         <div style={{ width: "100%", height: 2, background: "#0047CC" }} />
-        <div style={{
-          fontSize: 8,
-          letterSpacing: "0.3em",
-          color: "#0047CC",
-          fontFamily: "'Helvetica Neue', sans-serif",
-          fontWeight: 400,
-        }}>.com</div>
       </div>
     ),
   },
